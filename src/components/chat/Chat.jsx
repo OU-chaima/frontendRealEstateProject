@@ -144,6 +144,6 @@ function Chat({ sellerId }) {
         </div>
     );
   }
+}
 
   export default Chat;
-}
