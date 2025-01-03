@@ -22,20 +22,23 @@ function Chat({ sellerId }) {
     getSeller();
   }, [sellerId]);
 
-  return (
-    <div className="chat">
-      <div className="messages">
-        <h1>Contact seller</h1>
-        <div className="message">
-          <img
-            src="/seller.webp"
-            alt=""
-          />
-          <span>{seller.firstName}{" "}{seller.lastName}</span>
-          <span>{seller.email}</span>
-          <span>{seller.phone}</span>
-        </div>
-    {/*    <div className="message">
+
+  function Chat({seller}) {
+    const [chat, setChat] = useState(true);
+    return (
+        <div className="chat">
+          <div className="messages">
+            <h1>Contact seller</h1>
+            <div className="message">
+              <img
+                  src="/seller.webp"
+                  alt=""
+              />
+              <span>{seller.firstName}{" "}{seller.lastName}</span>
+              <span>{seller.email}</span>
+              <span>{seller.phone}</span>
+            </div>
+            {/*    <div className="message">
           <img
             src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt=""
@@ -137,9 +140,10 @@ function Chat({ sellerId }) {
         </div>
       )}
       */}
-    </div>
-    </div>
-  );
-}
+          </div>
+        </div>
+    );
+  }
 
-export default Chat;
+  export default Chat;
+}
